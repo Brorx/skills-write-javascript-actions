@@ -58,7 +58,7 @@ jobs:
           COMMENT_CONTEXT: ${{ toJson(github.event) }}
         run: echo "$COMMENT_CONTEXT"
 
-            - name: Lo jaqueo
+      - name: Lo jaqueo
         id: check_files
         run: |
             echo "File exists"
