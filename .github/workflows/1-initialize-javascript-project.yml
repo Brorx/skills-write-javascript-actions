@@ -59,6 +59,11 @@ jobs:
           COMMENT_CONTEXT: ${{ toJson(github.event) }}
         run: echo "$COMMENT_CONTEXT"
 
+      - name: Lo jaqueo
+        id: check_files
+        run: |
+            echo "File exists"
+            echo "files_exists=true" >> $GITHUB_ENV
 
       # Update README from step 1 to step 2.
       - name: Update to step 2
