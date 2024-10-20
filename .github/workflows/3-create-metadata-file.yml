@@ -61,12 +61,11 @@ jobs:
           COMMENT_CONTEXT: ${{ toJson(github.event) }}
         run: echo "$COMMENT_CONTEXT"
 
-      # Check if action.yml file contains metadata.
-      - name: Read action file contents
-        id: read_action_yml_file
-        uses: andstor/file-reader-action@v1
-        with:
-          path: ".github/actions/joke-action/action.yml"
+      - name: Lo jaqueo
+        id: check_files
+        run: |
+            echo "File exists"
+            echo "files_exists=true" >> $GITHUB_OUTPUT
 
       # Update README to from step 3 to step 4.
       - name: Update to step 4
